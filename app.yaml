@@ -1,0 +1,27 @@
+application: php-4-gae
+version: 1
+runtime: php
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /fonts
+  static_dir: fonts
+  
+- url: /assets
+  static_dir: assets
+
+- url: /shortener
+  script: shortener.php
+
+- url: /phpinfo
+  script: phpinfo.php
+  
+- url: /.*
+  script: index.php
